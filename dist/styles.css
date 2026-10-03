@@ -195,6 +195,25 @@ h1 {
   color: var(--muted);
 }
 
+.load-more {
+  display: block;
+  margin: 22px auto 0;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink);
+  background: var(--panel);
+  cursor: pointer;
+}
+
+.load-more:hover {
+  border-color: #555;
+}
+
+.load-more[hidden] {
+  display: none;
+}
+
 .sentinel {
   height: 1px;
 }

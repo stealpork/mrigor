@@ -1,23 +1,16 @@
 window.BIRTHDAY_VIDEOS = [
-  {
-    name: "Семья",
-    title: "Большой привет из дома",
-    note: "Тут будет первое теплое видео для Игоря.",
-    source: "",
-    poster: ""
-  },
-  {
-    name: "Друзья",
-    title: "То самое поздравление",
-    note: "Можно вставить ссылку на YouTube/VK/Rutube или локальный файл из папки videos.",
-    source: "",
-    poster: ""
-  },
-  {
-    name: "Коллеги",
-    title: "Коротко, но от души",
-    note: "Добавляй сюда сколько угодно таких объектов.",
-    source: "",
-    poster: ""
-  }
+  { title: "Видео 01", source: "videos/video-01.mp4" },
+  { title: "Видео 02", source: "videos/video-02.mp4" },
+  { title: "Видео 03", source: "videos/video-03.mp4" },
+  { title: "Видео 04", source: "videos/video-04.mp4" },
+  { title: "Видео 05", source: "videos/video-05.mp4" },
+  { title: "Видео 06", source: "videos/video-06.mp4" },
+  { title: "Видео 07", source: "videos/video-07.mp4" },
+  { title: "Видео 08", source: "videos/video-08.mp4" },
+  { title: "Видео 09", source: "videos/video-09.mp4" },
+  { title: "Видео 10", source: "videos/video-10.mp4" },
+  { title: "Видео 11", source: "videos/video-11.mp4" },
+  { title: "Видео 12", source: "videos/video-12.mp4" },
+  { title: "Видео 13", source: "videos/video-13.mp4" },
+  { title: "Видео 14", source: "videos/video-14.mp4" }
 ];

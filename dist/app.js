@@ -4,9 +4,11 @@
   const count = document.querySelector("[data-video-count]");
   const sentinel = document.querySelector("[data-sentinel]");
   const empty = document.querySelector("[data-empty]");
-  const batchSize = 9;
+  const loadMore = document.querySelector("[data-load-more]");
+  const batchSize = 3;
   let rendered = 0;
   let observer = null;
+  let lastLoadY = 0;
 
   function getProviderEmbed(url) {
     if (!url) return null;
@@ -88,18 +90,25 @@
     const body = document.createElement("div");
     body.className = "video-card__body";
 
-    const eyebrow = document.createElement("p");
-    eyebrow.className = "video-card__from";
-    eyebrow.textContent = video.name || "Гость";
-
     const title = document.createElement("h2");
     title.textContent = video.title || "Поздравление";
 
-    const note = document.createElement("p");
-    note.className = "video-card__note";
-    note.textContent = video.note || "Для Игоря, с теплом и улыбкой.";
+    body.append(title);
 
-    body.append(eyebrow, title, note);
+    if (video.name) {
+      const eyebrow = document.createElement("p");
+      eyebrow.className = "video-card__from";
+      eyebrow.textContent = video.name;
+      body.prepend(eyebrow);
+    }
+
+    if (video.note) {
+      const note = document.createElement("p");
+      note.className = "video-card__note";
+      note.textContent = video.note;
+      body.appendChild(note);
+    }
+
     card.append(media, body);
     return card;
   }
@@ -114,20 +123,26 @@
 
     grid.appendChild(fragment);
     rendered += next.length;
+    lastLoadY = window.scrollY;
 
-    if (rendered >= videos.length && observer) observer.disconnect();
+    const done = rendered >= videos.length;
+    if (loadMore) loadMore.hidden = done;
+    if (done && observer) observer.disconnect();
   }
 
   count.textContent = videos.length;
   empty.hidden = videos.length !== 0;
+  if (loadMore) loadMore.hidden = videos.length <= batchSize;
 
   if (videos.length > 0) {
     renderNextBatch();
+    if (loadMore) loadMore.addEventListener("click", renderNextBatch);
     observer = new IntersectionObserver(
       (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) renderNextBatch();
+        const movedDown = window.scrollY > lastLoadY + 80;
+        if (movedDown && entries.some((entry) => entry.isIntersecting)) renderNextBatch();
       },
-      { rootMargin: "360px" }
+      { rootMargin: "0px" }
     );
     observer.observe(sentinel);
   }
