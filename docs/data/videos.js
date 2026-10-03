@@ -14,5 +14,6 @@ window.BIRTHDAY_VIDEOS = [
   { title: "Видео 13", source: "videos/video-13.mp4" },
   { title: "Видео 14", source: "videos/video-14.mp4" },
   { title: "Видео 15", source: "videos/video-15.mp4" },
-  { title: "Видео 16", source: "videos/video-16.mp4" }
+  { title: "Видео 16", source: "videos/video-16.mp4" },
+  { title: "Видео 17", source: "videos/video-17.mp4" }
 ];
