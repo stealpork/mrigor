@@ -12,42 +12,28 @@
   <body>
     <main class="page">
       <header class="topline" aria-label="Шапка сайта">
-        <div class="brand">
-          <span class="brand__mark" aria-hidden="true">И</span>
-          <span>видеоальбом</span>
-        </div>
-        <p class="topline__meta">для одного хорошего дня и одного хорошего Игоря</p>
+        <div class="brand">Игорю</div>
       </header>
 
       <section class="intro">
         <div>
-          <p class="intro__label">с днем рождения</p>
-          <h1>Игорь, это все тебе</h1>
-          <p class="intro__copy">
-            Собрали короткие видео от тех, кто сегодня рядом хотя бы голосом.
-            Включай по порядку или открывай любое, как открытку из кармана.
-          </p>
+          <h1>С днем рождения, Игорь</h1>
         </div>
         <aside class="counter" aria-label="Количество поздравлений">
           <span class="counter__number" data-video-count>0</span>
-          <span class="counter__text">поздравлений уже ждут своего момента</span>
+          <span class="counter__text">видео</span>
         </aside>
       </section>
 
       <section class="video-section" aria-labelledby="videos-title">
         <div class="section-head">
           <h2 id="videos-title">Поздравления</h2>
-          <p>Короткие голоса, улыбки и пару историй, которые стоило сохранить.</p>
         </div>
         <div class="empty" data-empty hidden>Пока нет ни одного видео, но место уже накрыто.</div>
         <div class="video-grid" data-video-grid></div>
         <div class="sentinel" data-sentinel aria-hidden="true"></div>
       </section>
 
-      <footer class="footer">
-        <span>Игорю, с любовью.</span>
-        <span>2026</span>
-      </footer>
     </main>
 
     <script src="data/videos.js"></script>
