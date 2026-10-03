@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Видео-поздравления на день рождения Игоря.">
+    <title>Игорю с днем рождения</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171311'/%3E%3Cpath d='M18 40h28v8H18z' fill='%23e7b75f'/%3E%3Cpath d='M23 26h18v14H23z' fill='%23fff5df'/%3E%3Cpath d='M30 14c5 3 7 7 5 12h-7c-2-5-1-9 2-12z' fill='%23df674c'/%3E%3Ccircle cx='44' cy='25' r='5' fill='%238cc7a5'/%3E%3C/svg%3E">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topline" aria-label="Шапка сайта">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">И</span>
+          <span>видеоальбом</span>
+        </div>
+        <p class="topline__meta">для одного хорошего дня и одного хорошего Игоря</p>
+      </header>
+
+      <section class="intro">
+        <div>
+          <p class="intro__label">с днем рождения</p>
+          <h1>Игорь, это все тебе</h1>
+          <p class="intro__copy">
+            Собрали короткие видео от тех, кто сегодня рядом хотя бы голосом.
+            Включай по порядку или открывай любое, как открытку из кармана.
+          </p>
+        </div>
+        <aside class="counter" aria-label="Количество поздравлений">
+          <span class="counter__number" data-video-count>0</span>
+          <span class="counter__text">поздравлений уже ждут своего момента</span>
+        </aside>
+      </section>
+
+      <section class="video-section" aria-labelledby="videos-title">
+        <div class="section-head">
+          <h2 id="videos-title">Поздравления</h2>
+          <p>Короткие голоса, улыбки и пару историй, которые стоило сохранить.</p>
+        </div>
+        <div class="empty" data-empty hidden>Пока нет ни одного видео, но место уже накрыто.</div>
+        <div class="video-grid" data-video-grid></div>
+        <div class="sentinel" data-sentinel aria-hidden="true"></div>
+      </section>
+
+      <footer class="footer">
+        <span>Игорю, с любовью.</span>
+        <span>2026</span>
+      </footer>
+    </main>
+
+    <script src="data/videos.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
