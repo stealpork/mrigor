@@ -1,0 +1,18 @@
+window.BIRTHDAY_VIDEOS = [
+  { title: "Видео 01", source: "videos/video-01.mp4" },
+  { title: "Видео 02", source: "videos/video-02.mp4" },
+  { title: "Видео 03", source: "videos/video-03.mp4" },
+  { title: "Видео 04", source: "videos/video-04.mp4" },
+  { title: "Видео 05", source: "videos/video-05.mp4" },
+  { title: "Видео 06", source: "videos/video-06.mp4" },
+  { title: "Видео 07", source: "videos/video-07.mp4" },
+  { title: "Видео 08", source: "videos/video-08.mp4" },
+  { title: "Видео 09", source: "videos/video-09.mp4" },
+  { title: "Видео 10", source: "videos/video-10.mp4" },
+  { title: "Видео 11", source: "videos/video-11.mp4" },
+  { title: "Видео 12", source: "videos/video-12.mp4" },
+  { title: "Видео 13", source: "videos/video-13.mp4" },
+  { title: "Видео 14", source: "videos/video-14.mp4" },
+  { title: "Видео 15", source: "videos/video-15.mp4" },
+  { title: "Видео 16", source: "videos/video-16.mp4" }
+];
